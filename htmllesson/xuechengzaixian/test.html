@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <script src="js/animate.js"></script>
+    <style>
+        main {
+            position: relative;
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+            background-color: black;
+        }
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div></div>
+    </main>
+    <script>
+        let div = document.querySelector('div');
+        div.addEventListener('click', function () {
+            animate(div, 100);
+            console.dir(div);
+        })
+
+        console.log(4%5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动测试</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+      }
+
+      li {
+          list-style: none;
+      }
+
+      .floatBox {
+          height: 300px;
+          width: 1000px;
+          background-color: gray;
+          margin: 100px auto;
+        }
+
+      .floatBox .floatLi,
+      .floatBox .floatLiLast {
+          height: 100%;
+          width: 235px;
+          float: left;
+          background-color: #aaaaaa;
+          margin-right: 20px;
+        }
+
+      .floatBox .floatLiLast {
+          margin-right: 0;
+      }
+  </style>
+</head>
+<body>
+    <div>
+        <ul class="floatBox">
+            <li class="floatLi">float盒子</li>
+            <li class="floatLi">float盒子</li>
+            <li class="floatLi">float盒子</li>
+            <li class="floatLiLast">float盒子</li>
+        </ul>
+    </div>
+<!--    <div class="testFloat">下方</div>-->
+</body>
+</html>

@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /*float: left;*/
+    list-style: none;
+}
+
+h4 {
+    font: 400 16px 'Microsoft YaHei';
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom:1;
+}
+
+.demo-ul {
+    margin: 200px auto;
+    width: 1200px;
+}
+
+.fllil {
+    margin: 0 auto;
+    width: 480px;
+}
+
+.demo-ul li{
+    float: left;
+    padding: 0 10px;
+    width: 100px;
+    background: #f90;
+    position: relative;
+}
+.demo-ul li a,
+.demo-ul li h4 {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.demo-ul li ul{
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    transform: scaleY(0);
+    overflow: hidden;
+}
+.ul-transition ul{
+    transform-origin: 0 0;
+    transition: all .5s;
+}
+.demo-ul li:hover ul{
+    transform: scaleY(1);
+}
+.demo-ul li ul li{
+    float: none;
+    background: #0099ff;
+
+}

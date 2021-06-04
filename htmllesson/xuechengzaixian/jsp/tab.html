@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSP-Tab</title>
+    <script src="../js/jquery.js"></script>
+    <style>
+        .clearfix:before, .clearfix:after {
+            content: "";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            *zoom:1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .nav-tab {
+            margin: 100px auto;
+            width: 1000px;
+            height: 500px;
+        }
+
+        .tab-list {
+            height: 29px;
+            border-bottom: 1px solid red;
+        }
+
+        .tab-list li {
+            float: left;
+            width: 150px;
+            height: 29px;
+            text-align: center;
+            line-height: 30px;
+            background: none;
+            color: #000000;
+        }
+
+        .tab-list .on-focus {
+            background-color: red;
+            color: #ffffff;
+        }
+
+        .tab-list li:hover {
+            cursor: pointer;
+            color: red;
+        }
+
+        .tab-list .on-focus:hover {
+            color: #ffffff;
+        }
+
+        .tab-con {
+            position: relative;
+        }
+
+        .item {
+            display: none;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-tab">
+        <ul class="tab-list clearfix">
+            <li class="on-focus">商品介绍</li>
+            <li>规格与包装</li>
+            <li>售后保障</li>
+            <li>评价（10000）</li>
+            <li>手机社区</li>
+        </ul>
+        <div class="tab-con">
+            <div class="item" style="display: block"><p>商品介绍商品介绍商品介绍商品介绍商品介绍商品介绍商品介绍商品介绍商品介绍</p></div>
+            <div class="item"><p>规格与包装规格与包装规格与包装规格与包装规格与包装规格与包装规格与包装规格与包装规格与包装规格与包装规格与包装</p></div>
+            <div class="item"><p>售后保障售后保障售后保障售后保障售后保障售后保障售后保障</p></div>
+            <div class="item"><p>评价（10000）评价（10000）评价（10000）评价（10000）评价（10000）评价（10000）评价（10000）</p></div>
+            <div class="item"><p>手机社区手机社区手机社区手机社区手机社区手机社区</p></div>
+        </div>
+    </div>
+
+<!--    <script>-->
+<!--        let tabLi = document.querySelector('.tab-list').children;-->
+<!--        let tabItem = document.querySelector('.tab-con').children;-->
+<!--        for (let i = 0; i < tabLi.length; i++) {-->
+<!--            tabLi[i].onclick = function () {-->
+<!--                for (let j = 0; j < tabLi.length; j++) {-->
+<!--                    tabLi[j].className = '';-->
+<!--                    tabItem[j].className = 'item';-->
+<!--                }-->
+<!--                this.className = 'on-focus';-->
+<!--                tabItem[i].className = 'item current';-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+    <script>
+        $(function () {
+            $('.tab-list li').click(function () {
+                $(this).toggleClass('on-focus');
+                $(this).siblings().removeClass('on-focus');
+
+                let index = $(this).index();
+
+                $('.tab-con div').eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</body>
+</html>

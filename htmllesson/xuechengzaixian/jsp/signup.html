@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src:  url('fonts/icomoon.eot?1jm8v3');
+            src:  url('fonts/icomoon.eot?1jm8v3#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?1jm8v3') format('truetype'),
+            url('fonts/icomoon.woff?1jm8v3') format('woff'),
+            url('fonts/icomoon.svg?1jm8v3#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: none;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        button {
+            outline: none;
+        }
+
+        input {
+            outline: none;
+            height: 24px;
+            border-bottom: 1px solid #000000;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #b4b4b4;
+        }
+
+        main {
+            margin: 50px auto;
+            width: 600px;
+            height: 700px;
+            box-sizing: border-box;
+            border: 1px solid #000000;
+        }
+
+        h2 {
+            font: 400 20px 'Arial Black';
+            text-align: center;
+        }
+
+        table {
+            padding: 40px;
+            font-size: 16px;
+        }
+
+        tr {
+            height: 50px;
+        }
+
+        .user-account {
+            width: 250px;
+        }
+
+        .prompt,
+        .send-v-code {
+            display: none;
+            margin-left: 40px;
+            font-size: 14px;
+            color: #ff0000;
+        }
+
+        .send-v-code {
+            display: block;
+            font-size: 14px;
+            color: blue;
+        }
+
+        .icon-checkmark:before {
+            font-family: 'icomoon';
+            content: "\ea10";
+            color: #00d500;
+        }
+
+        .icon-cross:before {
+            font-family: 'icomoon';
+            content: "\ea0f";
+        }
+
+        .pos-abs {
+            position: relative;
+        }
+
+        .icon-eye-hidden,
+        .icon-eye1 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            /*vertical-align: middle;*/
+            color: #000000;
+            font-size: 20px;
+        }
+
+        .icon-eye-hidden:before {
+            font-family: 'icomoon';
+            content: '\eaeb';
+        }
+
+        .icon-eye1:before {
+            font-family: 'icomoon';
+            content: "\eaec";
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h2>用户注册</h2>
+        <form action="" class="user-info">
+            <table>
+                <tr>
+                    <td>账号：</td>
+                    <td><label><input type="text" id="account" placeholder="请输入账号..." class="user-account"></label></td>
+                    <td>
+                        <p class="prompt"><span class="icon-cross"></span>
+                            请输入正确的用户名
+                        </p>
+                        <p class="prompt"><span class="icon-checkmark"></span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td><label class="pos-abs">
+                        <input type="password" id="psw" placeholder="请输入密码..." class="user-account">
+                        <span class="icon-eye-hidden" id="eye"></span>
+                    </label></td>
+                    <td>
+                        <p class="prompt"><span class="icon-cross"></span>
+                            请输入6-16位的密码
+                        </p>
+                        <p class="prompt"><span class="icon-checkmark"></span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>验证码：</td>
+                    <td><label class="pos-abs">
+                        <input type="number" id="v-code" placeholder="请输入验证码..." class="user-account">
+                    </label></td>
+                    <td>
+                        <button class="send-v-code">获取验证码</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+    <script>
+        // 显示/隐藏密码
+        let eye = document.querySelector('#eye');
+        let psw = document.querySelector('#psw');
+        eye.onclick = function () {
+            this.flag = !this.flag;
+            if(this.flag){
+                psw.type = 'text';
+                this.className = 'icon-eye1';
+            }else {
+                psw.type = 'password';
+                this.className = 'icon-eye-hidden';
+            }
+        }
+
+        // 账号、密码提示
+        let account = document.querySelectorAll('.user-account');
+        let wrgPrompt = [];
+        let rgtPrompt = [];
+        for (let i = 0; i < account.length; i++) {
+            wrgPrompt[i] = account[i].parentNode.parentNode.nextElementSibling.children[0];
+            rgtPrompt[i] = account[i].parentNode.parentNode.nextElementSibling.children[1];
+
+            account[i].onblur = function () {
+                if(this.value.length < 6 || this.value.length > 16){
+                    wrgPrompt[i].style.display = 'block';
+                    rgtPrompt[i].style.display = 'none';
+                }else {
+                    wrgPrompt[i].style.display = 'none';
+                    rgtPrompt[i].style.display = 'block';
+                }
+            }
+        }
+
+        // 验证码
+        let sendVCode = document.querySelector('.send-v-code');
+        let timers = 60;
+        let isEnd = null;
+        // let reVCode = function () {
+        function reVCode() {
+            if (timers === 0) {
+                clearInterval(isEnd);
+                sendVCode.disabled = false;
+                sendVCode.style.color = 'blue';
+                sendVCode.innerHTML = '获取验证码';
+                timers = 60;
+            }else {
+                sendVCode.innerHTML = '重新发送(' + timers + ')';
+                timers--;
+            }
+        }
+
+        sendVCode.addEventListener('click', function () {
+            this.disabled = true;
+            this.style.color = 'gray';
+            reVCode();
+            isEnd = setInterval(reVCode, 1000);
+        });
+    </script>
+
+</body>
+</html>

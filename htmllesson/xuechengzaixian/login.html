@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src:  url('fonts/icomoon.eot?1jm8v3');
+            src:  url('fonts/icomoon.eot?1jm8v3#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?1jm8v3') format('truetype'),
+            url('fonts/icomoon.woff?1jm8v3') format('woff'),
+            url('fonts/icomoon.svg?1jm8v3#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: none;
+        }
+
+        body {
+            background-color: #eaeaea;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        button {
+            outline: none;
+            cursor: pointer;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        input {
+            outline: none;
+        }
+
+        main,
+        footer {
+            margin: 50px auto 0;
+            width: 500px;
+            height: 700px;
+            box-sizing: border-box;
+            background-color: #fff;
+            /*border: 1px solid #000000;*/
+        }
+
+        footer {
+            position: relative;
+            margin: 0 auto;
+            height: 30px;
+        }
+
+        h2 {
+            font: 400 20px 'Arial Black';
+            text-align: center;
+        }
+
+        .user {
+            margin: 40px;
+            margin-bottom: 20px;
+        }
+
+        .user label {
+            display: block;
+            margin-top: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #a5a5a5;
+        }
+
+        #account,
+        #psw {
+            font-size: 14px;
+        }
+
+        .user label:nth-child(2) {
+            position: relative;
+        }
+
+        .user label div {
+            position: absolute;
+            top: 2px;
+            right: 0;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        .icon-eye-hidden,
+        .icon-eye1 {
+            vertical-align: middle;
+            color: #000000;
+            font-size: 20px;
+        }
+
+        .icon-eye-hidden:before {
+            font-family: 'icomoon';
+            content: '\eaeb';
+        }
+
+        .icon-eye1:before {
+            font-family: 'icomoon';
+            content: "\eaec";
+        }
+
+        .user label div em {
+            margin: 0 8px;
+            font-style: normal;
+        }
+
+        #login,
+        .signup {
+            display: block;
+            width: 420px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: red;
+            font: 16px 'Microsoft YaHei';
+            color: #ffffff;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #login {
+            margin-top: 60px;
+            cursor: pointer;
+        }
+
+        .signup {
+            margin: 0 40px;
+            color: red;
+            background-color: #fff;
+            border: 1px solid red;
+        }
+
+        #logged,
+        #del-info {
+            position: absolute;
+            padding: 0 5px;
+            border: 1px solid #000000;
+            border-radius: 6px;
+            line-height: 20px;
+        }
+
+        #logged {
+            left: 2px;
+        }
+
+        #del-info {
+            right: 2px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>京东登录</h2>
+        <form action="index.html" class="user">
+            <label><input type="text" id="account" placeholder="用户名/邮箱/手机号" name="username"></label>
+            <label>
+                <input type="password" id="psw" placeholder="请输入密码">
+                <div>
+                    <span class="icon-eye-hidden" id="eye"></span>
+                    <em>|</em>
+                    <a class="forget">忘记密码</a>
+                </div>
+            </label>
+            <input type="submit" id="login" value="登录">
+        </form>
+
+
+        <a href="signup.html" class="signup">注册账号</a>
+    </main>
+    <footer>
+        <button id="logged">查看已登录用户</button>
+        <button id="del-info">删除用户信息</button>
+    </footer>
+
+    <script>
+        let eye = document.querySelector('#eye');
+        let psw = document.querySelector('#psw');
+        let acct = document.querySelector('#account');
+        let userAccount = document.getElementById('login');
+        eye.onclick = function () {
+            this.flag = !this.flag;
+            if(this.flag){
+                psw.type = 'text';
+                this.className = 'icon-eye1';
+            }else {
+                psw.type = 'password';
+                this.className = 'icon-eye-hidden';
+            }
+        }
+
+        userAccount.onclick = function () {
+            console.dir('acct.value: ' + acct.value);
+            console.dir('psw.value: ' + psw.value);
+            this.setAttribute('data-account', acct.value);  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            this.setAttribute('data-password', psw.value);
+            alert('登陆成功');
+        }
+
+        // console.dir('userAccount: '+ userAccount);
+        let logged = document.getElementById('logged');
+        let delInfo = document.getElementById('del-info');
+        logged.onclick = function () {
+            console.log('account: ' + userAccount.getAttribute('data-account'));
+            console.log('password: ' + userAccount.getAttribute('data-password'));
+        }
+
+        delInfo.onclick = function () {
+            userAccount.setAttribute('data-account', null);
+            userAccount.setAttribute('data-password', null);
+            alert('删除用户信息成功。');
+        }
+
+
+    </script>
+</body>
+</html>

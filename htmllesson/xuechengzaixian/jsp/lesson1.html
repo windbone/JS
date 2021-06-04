@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <style>
+        .protocol {
+            text-decoration: none;
+        }
+
+        .protocol:visited {
+            color: #0000EE;
+        }
+
+        .protocol:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr id="title"><th><h2>注册页面</h2></th></tr>
+            <tr id="user_account">
+                <td>账号：</td>
+                <td><label><input type="text" name="account" id="account"></label></td>
+            </tr>
+            <tr id="user_pwd">
+                <td>密码：</td>
+                <td><label><input type="password" name="pwd" id="pwd"></label></td>
+            </tr>
+            <tr id="user_name">
+                <td>姓名：</td>
+                <td><label><input type="text" name="username" id="username" value="请输入姓名"></label></td>
+            </tr>
+            <tr>
+                <td id="user_gender">性别：</td>
+                <td>
+                    <label><input type="radio" name="gender" id="male" value="m">男</label>
+                    <label><input type="radio" name="gender" id="female" value="f">女</label>
+                </td>
+            </tr>
+            <tr id="user_birthdate">
+                <td>生日：</td>
+                <td>
+                    <label>
+                        <select name="birthyear">
+                            <option>---请选择年份---</option>
+                            <option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option><option>1995</option><option>1996</option><option>1997</option>
+                        </select>
+                    </label>
+                    <label>
+                        <select name="birthmonth">
+                            <option>---请选择月份---</option>
+                            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                        </select>
+                    </label>
+                    <label>
+                        <select name="birthday">
+                            <option>---请选择日期---</option>
+                            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                            <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                            <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr id="user_edu">
+                <td>学历：</td>
+                <td>
+                    <label>
+                        <select>
+                            <option>---请选择学历---</option>
+                            <option>小学</option>
+                            <option>初中</option>
+                            <option>高中</option>
+                            <option>本科</option>
+                            <option>硕士</option>
+                            <option>博士</option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr id="profession">
+                <td>职业：</td>
+                <td>
+                    <label class="professions"><input type="checkbox">骑士</label>
+                    <label class="professions"><input type="checkbox">战士</label>
+                    <label class="professions"><input type="checkbox">暗黑骑士</label>
+                    <label class="professions"><input type="checkbox">白魔法师</label>
+                    <label class="professions"><input type="checkbox">学者</label>
+                    <label class="professions"><input type="checkbox">占星术士</label>
+                    <label class="professions"><input type="checkbox">武士</label>
+                    <label class="professions"><input type="checkbox">武僧</label>
+                    <label class="professions"><input type="checkbox">龙骑士</label>
+                    <label class="professions"><input type="checkbox">忍者</label>
+                    <label class="professions"><input type="checkbox">吟游诗人</label>
+                    <label class="professions"><input type="checkbox">机工士</label>
+                    <label class="professions"><input type="checkbox">舞者</label>
+                    <label class="professions"><input type="checkbox">召唤师</label>
+                    <label class="professions"><input type="checkbox">黑魔法师</label>
+                    <label class="professions"><input type="checkbox">赤魔法师</label>
+                </td>
+            </tr>
+            <tr id="user_introduce">
+                <td>个人简介：</td>
+                <td><label><textarea name="introduce">请输入个人简介</textarea></label></td>
+            </tr>
+            <tr id="attention">
+                <td></td>
+                <td>
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                    我同意<a class="protocol" href="../../zhuce.html" target="_blank">注册条款</a>与<a class="protocol" href="../../yinsi.html" target="_blank">用户隐私保护协议</a>
+                </td>
+            </tr>
+            <tr><td colspan="2"><input type="button" value="提交"></td></tr>
+        </table>
+
+
+    </form>
+</body>
+</html>

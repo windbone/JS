@@ -1,0 +1,785 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?1jm8v3');
+    src:  url('fonts/icomoon.eot?1jm8v3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1jm8v3') format('truetype'),
+    url('fonts/icomoon.woff?1jm8v3') format('woff'),
+    url('fonts/icomoon.svg?1jm8v3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+html, body {height: 100%;}
+
+body {
+    background-color: #f3f5f7;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+}
+
+button {
+    outline: none;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom:1;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header-ground {
+    height: 42px;
+    background-color: #fff;
+    margin: 1px 0;
+}
+
+.header {
+    height: 42px;
+    margin: 0 auto;
+}
+
+.header-logo,
+.footer-logo {
+    float: left;
+    height: 42px;
+    width: 230px;
+}
+
+.header-nav {
+    float: left;
+    margin-left: 40px;
+}
+
+.header-nav-li {
+    position: relative;
+    float: left;
+    height: 42px;
+    box-sizing: border-box;
+}
+
+.header-nav-li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+}
+
+.header-nav-li:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+/*#header-nav-lesson:hover .nav-list{*/
+/*    height: 240px;*/
+/*}*/
+
+.nav-list {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    z-index: 1;
+    /*height: 0;*/
+    background-color: #fff;
+    font-size: 0;
+    /*transition: .5s;*/
+}
+
+.nav-list li:hover {
+    border: none;
+    background-color: #d7d7d7;
+}
+
+
+
+
+.header-search {
+    float: left;
+    height: 42px;
+    width: 412px;
+    margin-left: 80px;
+}
+
+.header-search-input {
+    float: left;
+    height: 40px;
+    width: 350px;
+    border: 1px solid #B1B1B1FF;
+    border-right: none;
+    padding-left: 10px;
+}
+
+.header-search-button {
+    float: left;
+    height: 42px;
+    width: 50px;
+}
+
+.header-search-button-img {
+    height: 42px;
+    width: 50px;
+}
+
+.user {
+    float: left;
+    height: 42px;
+    width: 150px;
+    margin-left: 70px;
+}
+
+.user ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+.user-img {
+    margin: 6px 0;
+}
+
+.user ul li a .user-name {
+    line-height: 42px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/*banner*/
+.banner-ground {
+    height: 414px;
+    background-color: #1c036c;
+}
+
+.banner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+}
+
+.banner .focus li {
+    float: left;
+}
+
+.banner .focus a {
+    display: block;
+    height: 414px;
+}
+
+.banner-img {
+    width: 1200px;
+    height: 414px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    left: 190px;
+    width: 26px;
+    height: 38px;
+    background: rgba(0,0,0,.3);
+    border-radius: 0 19px 19px 0;
+
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 38px;
+}
+
+.next {
+    left: auto;
+    right: 230px;
+    border-radius: 19px 0 0 19px;
+}
+
+.banner-promo {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 34px;
+    /*background: rgba(0,0,0,0.3);*/
+    width: 140px;
+    height: 12px;
+    border-radius: 6px;
+}
+
+.banner-promo li {
+    float: left;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+/*.banner-promo li:hover {*/
+/*    background-color: #ff6f00;*/
+/*}*/
+
+.left-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 190px;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+}
+
+.left-banner-link {
+    padding: 0 20px;
+    height: 46px;
+    line-height: 46px;
+}
+
+.left-banner-link a {
+    display: block;
+    height: 46px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.left-banner-link-arrow {
+    float: right;
+}
+
+.left-banner-link a:hover {
+    color: #00b4ff;
+}
+
+.right-banner {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -155px;
+    width: 230px;
+    height: 310px;
+    background-color: #fff;
+}
+
+.my-course {
+    height: 50px;
+    background-color: #9bceea;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.right-banner ul {
+    margin: 6px 20px 0 20px;
+    width: 190px;
+    height: 189px;
+}
+
+.right-banner ul li {
+    height: 34px;
+    padding: 10px 0 18px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.right-banner .course .continue,
+.right-banner .course .course-name {
+    font-size: 16px;
+    color: #4e4e4e;
+    line-height: 16px;
+}
+
+.right-banner .course .course-name {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.right-banner .now-study {
+    font-size: 12px;
+    color: #a5a5a5;
+    line-height: 12px;
+}
+
+.right-banner .all-course {
+    display: block;
+    margin: 5px 0 0 20px;
+    width: 198px;
+    height: 38px;
+    border: 1px solid #22b0ff;
+    text-align: center;
+    line-height: 38px;
+    color: #22b0ff;
+}
+
+.right-banner .all-course:hover {
+    background-color: #22b0ff;
+    color: #ffffff;
+}
+
+
+/*精品推荐*/
+.recommend {
+    margin-top: 10px;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,.1);
+}
+
+.recommend .recommend-list {
+    float: left;
+    padding: 22px 0;
+}
+
+.recommend .recommend-list li {
+    padding: 0 34px;
+    width: 64px;
+    float: left;
+    border-right: 1px solid #bfbfbf;
+}
+
+.recommend .recommend-list .recommend-title,
+.recommend .recommend-list .recommend-class {
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.recommend .recommend-list .recommend-title {
+    color: #00a4ff;
+}
+
+.recommend .change-interest {
+    display: block;
+    float: right;
+    padding: 22px 27px 22px 0;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+/*左侧边栏*/
+.left-bar {
+    display: table;
+    z-index: 3;
+    position: absolute;
+    left: 250px;
+    padding: 0 10px;
+    height: 300px;
+    width: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+}
+
+.left-bar li a {
+    display: table-cell;
+    width: 60px;
+    height: 59px;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+/*主体1*/
+.main1,
+.main2,
+.main3 {
+    margin-top: 35px;
+}
+
+.main-header {
+    height: 42px;
+}
+
+.main-title {
+    float: left;
+    width: 228px;
+    font: 400 20px 'Microsoft YaHei';
+    color: #494949;
+}
+
+.main-more {
+    display: block;
+    float: right;
+    margin: 10px 30px;
+    font: 400 12px 'Microsoft YaHei';
+    color: #a5a5a5;
+}
+
+.main-goods {
+    float: left;
+    margin: 0 10px 15px 0;
+    width: 232px;
+    height: 270px;
+    background-color: #fff;
+}
+
+.main-goods a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hot {
+    position: absolute;
+    top: 2px;
+    right: -4px;
+    width: 40px;
+    height: 24px;
+    background: url("images/hot.png");
+}
+
+.main-goods a:hover {
+    box-shadow: 1px 2px 10px 1px rgba(0,0,0,.3);
+}
+
+.tail {
+    margin-right: 0;
+}
+
+.main-goods-title,
+.main-goods-desc {
+    margin-top: 25px;
+    padding: 0 25px;
+    font: 400 14px 'Microsoft YaHei';
+}
+
+.main-goods-desc {
+    margin-top: 20px;
+    background-color: red;
+}
+
+.main-goods-desc .good-level,
+.main-goods-desc .people-num {
+    float: left;
+    font: 400 12px 'Microsoft YaHei';
+    color: #ff7c2d;
+}
+
+.main-goods-desc .people-num {
+    color: #999999;
+}
+
+.main2 {
+    height: 434px;
+}
+
+.main-nav {
+    float: left;
+    margin-left: 160px;
+    padding-top: 5px;
+}
+
+.main-nav li {
+    float: left;
+    margin-left: 70px;
+}
+
+.main-nav-title {
+    font: 400 16px 'Microsoft YaHei';
+    color: #868686;
+}
+
+.main-nav-title:hover {
+    color: #00a4ff;
+}
+
+.main2-body {
+    height: 392px;
+}
+
+.main2-left {
+    display: block;
+    float: left;
+    width: 228px;
+    height: 392px;
+    background: url("images/main2-left1.png") no-repeat;
+}
+
+.main2-left-title {
+    padding: 45px 32px 0 32px;
+    font: 700 18px 'Microsoft YaHei';
+    color: #ffffff;
+}
+
+.main2-left-desc {
+    height: 162px;
+    margin-top: 50px;
+    padding: 0 32px;
+}
+
+.main2-left-list {
+    display: block;
+    float: left;
+}
+
+.main2-left-desc ul {
+    float: left;
+    width: 153px;
+}
+
+.main2-left-desc ul li {
+    margin: 0 0 57px 5px;
+    font: 700 14px 'Microsoft YaHei';
+    color: #ffffff;
+    line-height: 14px;
+}
+
+.main2-right {
+    float: right;
+    width: 958px;
+    height: 392px;
+}
+
+.main2-banner {
+    height: 100px;
+    margin-bottom: 22px;
+}
+
+.main2-list {
+    height: 270px;
+}
+
+.main3 {
+    height: 312px;
+}
+
+.footer-ground {
+    margin-top: 40px;
+    height: 415px;
+    background-color: #fff;
+}
+
+.footer-left,
+.footer-right {
+    float: left;
+    padding: 30px 20px;
+    width: 432px;
+}
+
+.footer-logo {
+    float: none;
+}
+
+.company-desc {
+    margin-top: 24px;
+    font: 12px 'Microsoft YaHei';
+    color: #666666;
+}
+
+.downAPP {
+    display: block;
+    margin-top: 17px;
+    width: 118px;
+    height: 34px;
+    border: 1px solid #00a4ff;
+    font: 16px 'Microsoft YaHei';
+    color: #00a4ff;
+    line-height: 34px;
+    text-align: center;
+}
+
+.downAPP:hover {
+    color: #ffffff;
+    background-color: #00a4ff;
+}
+
+.footer-right {
+    float: right;
+    width: 688px;
+}
+
+.footer-1st-li {
+    float: left;
+    margin-left: 115px;
+    font: 12px '宋体';
+    color: #333333;
+    line-height: 22px;
+}
+
+.footer-2nd-ul dt {
+    font: 400 16px 'Microsoft YaHei';
+    color: #333333;
+    line-height: 40px;
+}
+
+.right-ad {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 270px;
+}
+
+.advertising {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    border: 1px solid #e3e1e1;
+    font-size: 10px;
+    color: #e3e1e1;
+}
+
+
+/*登录界面*/
+.gray-bg {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+}
+
+.login-table {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    /* ↓也可以水平居中，但自身实际位置不变,类似于相对定位*/
+    transform: translateX(-50%);
+    width: 500px;
+    height: 400px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.login-table .close-login {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.login-table,
+.login-table .close-login {
+    box-shadow: 0 0 10px 2px #ffffff;
+}
+
+.icon-cancel-circle:before {
+    font-family: 'icomoon';
+    content: "\ea0d";
+    font-size: 40px;
+}
+
+.login-table h2 {
+    padding-top: 20px;
+    font: 400 20px 'Arial Black';
+    text-align: center;
+}
+
+.user-account {
+    margin: 40px;
+    margin-bottom: 20px;
+}
+
+.user-account label {
+    display: block;
+    margin-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+#account,
+#psw {
+    font-size: 14px;
+}
+
+.user-account label:nth-child(2) {
+    position: relative;
+}
+
+.user-account label div {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.icon-eye-hidden,
+.icon-eye1 {
+    vertical-align: middle;
+    color: #000000;
+    font-size: 20px;
+}
+
+.icon-eye-hidden:before {
+    font-family: 'icomoon';
+    content: '\eaeb';
+}
+
+.icon-eye1:before {
+    font-family: 'icomoon';
+    content: "\eaec";
+}
+
+.user-account label div em {
+    margin: 0 8px;
+    font-style: normal;
+}
+
+#login,
+.signup {
+    display: block;
+    width: 420px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: red;
+    font: 16px 'Microsoft YaHei';
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+}
+
+#login {
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.signup {
+    margin: 0 40px;
+    color: red;
+    background-color: #fff;
+    border: 1px solid red;
+}

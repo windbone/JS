@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsptest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        #btn:hover {
+            cursor: pointer;
+            background-color: #d0d0d0;
+            transition: all .7s;
+        }
+
+        #btn {
+            display: block;
+            margin: 100px auto;
+            box-sizing: border-box;
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            background-color: #ececec;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../index.html" target="_blank" id="btn">点我</a>
+
+    <button id="btn-disabled">点击一次禁用</button>
+
+    <script>
+        let btn = document.getElementById('btn');
+        console.log(btn);
+        console.dir(btn);
+        btn.onclick = function () {
+            alert('Hello JSP');
+        }
+
+        let btnDisabled = document.querySelector('button');
+        console.log('querySelector: ' + btnDisabled);
+        console.dir('querySelector: ' + btnDisabled);
+        btnDisabled.onclick = function () {
+            // btnDisabled.disabled = true;
+            this.disabled = true
+        }
+    </script>
+</body>
+</html>

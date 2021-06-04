@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学成在线</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!--头部header-->
+    <div class="header-ground">
+        <div class="header w">
+        <!--logo区域-->
+        <div class="header-logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <!--顶部导航栏-->
+        <ul class="header-nav">
+            <li class="header-nav-li">
+                <a href="#">首页</a>
+                <ul class="nav-list">
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                </ul>
+            </li>
+            <li class="header-nav-li" id="header-nav-lesson">
+                <a href="#">课程</a>
+                <ul class="nav-list" id="lessons">
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">课程</a></li>
+                </ul>
+            </li>
+            <li class="header-nav-li">
+                <a href="#">职业规划</a>
+                <ul class="nav-list" id="career">
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职业规划</a></li>
+                    <li><a href="#">职业规划</a></li>
+                </ul>
+            </li>
+            </ul>
+        <!--顶部搜索栏-->
+        <div class="header-search">
+            <label>
+                <input type="text" class="header-search-input"  id="top-search" placeholder="请输入搜索内容...">
+            </label>
+            <button class="header-search-button">
+                <a href="#">
+                    <img src="images/fa-search.png" alt="" class="header-search-button-img">
+                </a>
+            </button>
+        </div>
+        <!--用户信息-->
+        <div class="user">
+            <ul>
+                <li><a href="#"><img src="images/user.png" alt="" class="user-img"></a></li>
+                <li><a href="#"><h4 class="user-name">登录</h4></a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <!--banner-->
+    <div class="banner-ground">
+        <div class="banner w">
+            <ul class="focus">
+                <li><a href=""><img src="images/focus/focus1.png" alt="" class="banner-img"></a></li>
+                <li><a href=""><img src="images/focus/focus2.jpg" alt="" class="banner-img"></a></li>
+                <li><a href=""><img src="images/focus/focus3.webp" alt="" class="banner-img"></a></li>
+                <li><a href=""><img src="images/focus/focus4.webp" alt="" class="banner-img"></a></li>
+                <li><a href=""><img src="images/focus/focus5.jpg" alt="" class="banner-img"></a></li>
+            </ul>
+            <!--左-->
+            <a href="javascript:" class="prev">&lt;</a>
+            <!--右-->
+            <a href="javascript:" class="next">&gt;</a>
+            <!--底部-->
+            <ol class="banner-promo"></ol>
+            <!--banner左侧-->
+            <div class="left-banner">
+                <ul>
+                    <li class="left-banner-link">
+                        <a href="">
+                        前端开发
+                        <span class="left-banner-link-arrow">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="left-banner-link"><a href="">
+                        后端开发
+                        <span class="left-banner-link-arrow">&gt;</span>
+                    </a></li>
+                    <li class="left-banner-link"><a href="">
+                        移动开发
+                        <span class="left-banner-link-arrow">&gt;</span>
+                    </a></li>
+                    <li class="left-banner-link"><a href="">
+                        人工智能
+                        <span class="left-banner-link-arrow">&gt;</span>
+                    </a></li>
+                    <li class="left-banner-link"><a href="">
+                        商业检测
+                        <span class="left-banner-link-arrow">&gt;</span>
+                    </a></li>
+                    <li class="left-banner-link"><a href="">
+                        云计算&大数据
+                        <span class="left-banner-link-arrow">&gt;</span>
+                    </a></li>
+                    <li class="left-banner-link"><a href="">
+                        运维&从测试
+                        <span class="left-banner-link-arrow">&gt;</span>
+                    </a></li>
+                    <li class="left-banner-link"><a href="">
+                        UI设计
+                        <span class="left-banner-link-arrow">&gt;</span>
+                    </a></li>
+                    <li class="left-banner-link"><a href="">
+                        产品
+                        <span class="left-banner-link-arrow">&gt;</span>
+                    </a></li>
+                </ul>
+            </div>
+            <!--banner右侧-->
+            <div class="right-banner">
+                <h2 class="my-course">我的课程表</h2>
+                <!--课程列表-->
+                <ul>
+                    <li>
+                        <h4 class="course">
+                            <a href="#"><span class="continue">继续学习</span>
+                                <span class="course-name">程序语言学习</span>
+                            </a>
+                        </h4>
+                        <a href="#"><span class="now-study">正在学习-使用对象</span></a>
+                    </li>
+                    <li>
+                        <h4 class="course">
+                            <a href="#">
+                                <span class="continue">继续学习</span>
+                                <span class="course-name">程序语言学习</span>
+                            </a>
+                        </h4>
+                        <a href="#"><span class="now-study">正在学习-使用对象</span></a>
+                    </li>
+                    <li>
+                        <h4 class="course">
+                            <a href="#">
+                                <span class="continue">继续学习</span>
+                                <span class="course-name">程序语言学习</span>
+                            </a>
+                        </h4>
+                        <a href="#"><span class="now-study">正在学习-使用对象</span></a>
+                    </li>
+                </ul>
+                <a href="#" class="all-course">全部课程</a>
+            </div>
+        </div>
+    </div>
+
+    <!--精品推荐-->
+    <div class="recommend w">
+        <ul class="recommend-list">
+            <li><h4 class="recommend-title">精品推荐</h4></li>
+            <li class="recommend-class"><a href="#">JQuery</a></li>
+            <li class="recommend-class"><a href="#">Spark</a></li>
+            <li class="recommend-class"><a href="#">MySQL</a></li>
+            <li class="recommend-class"><a href="#">JavaWeb</a></li>
+            <li class="recommend-class"><a href="#">MYSQL</a></li>
+            <li class="recommend-class"><a href="#">JavaWeb</a></li>
+        </ul>
+        <a href="#" class="change-interest">修改兴趣</a>
+    </div>
+
+    <!--左侧边栏-->
+    <ul class="left-bar">
+        <li><a href="#JQuery">JQuery</a></li>
+        <li><a href="#Spark">Spark</a></li>
+        <li><a href="#MySQL">MySQL</a></li>
+        <li><a href="#ML">机器学习工程师</a></li>
+        <li><a href="#front">前端开发工程师</a></li>
+        <li><a href="javascript:" style="border-bottom: none">返回顶部</a></li>
+    </ul>
+    <!--主体1-->
+    <div class="main1 w" id="JQuery">
+        <!--主体头部条-->
+        <div class="main-header">
+            <h2 class="main-title">JQuery</h2>
+            <a href="#" class="main-more">查看更多</a>
+        </div>
+        <!--主体1列表-->
+        <ul class="main1-list clearfix">
+            <li class="main-goods">
+                <a href="#">
+                    <em class="hot"></em>
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods tail">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods tail">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--主体2.1-->
+    <div class="main2 w" id="Spark">
+        <div class="main-header">
+            <h2 class="main-title">Spark</h2>
+            <!--主体2导航栏-->
+            <ul class="main-nav">
+                <li><a href="#"><span class="main-nav-title">热门</span></a></li>
+                <li><a href="#"><span class="main-nav-title">初级</span></a></li>
+                <li><a href="#"><span class="main-nav-title">中级</span></a></li>
+                <li><a href="#"><span class="main-nav-title">高级</span></a></li>
+            </ul>
+            <a href="#" class="main-more">查看更多</a>
+        </div>
+        <!--主体2body-->
+        <div class="main2-body">
+            <div class="main2-left">
+                <h2 class="main2-left-title">PHP入门：<br>基础语法到实际应用</h2>
+                <div class="main2-left-desc">
+                    <img src="images/main2-left-list.png" alt="" class="main2-left-list">
+                    <ul>
+                        <li>零基础入门：语法与界</li>
+                        <li>进阶：网络与数据缓存</li>
+                        <li>界面到数据存储</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main2-right">
+                <div class="main2-banner"><img src="images/main2-banner.png" alt="" width="958"></div>
+                <ul class="main2-list">
+                    <li class="main-goods">
+                        <a href="#">
+                            <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                            <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                            <div class="main-goods-desc">
+                                <h4 class="good-level">高级</h4>
+                                <p class="people-num">· 1125人正在学习</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="main-goods">
+                        <a href="#">
+                            <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                            <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                            <div class="main-goods-desc">
+                                <h4 class="good-level">高级</h4>
+                                <p class="people-num">· 1125人正在学习</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="main-goods">
+                        <a href="#">
+                            <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                            <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                            <div class="main-goods-desc">
+                                <h4 class="good-level">高级</h4>
+                                <p class="people-num">· 1125人正在学习</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="main-goods tail">
+                        <a href="#">
+                            <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                            <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                            <div class="main-goods-desc">
+                                <h4 class="good-level">高级</h4>
+                                <p class="people-num">· 1125人正在学习</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--主体2.2-->
+    <div class="main2 w" id="MySQL">
+        <div class="main-header">
+            <h2 class="main-title">MySQL</h2>
+            <!--主体2导航栏-->
+            <ul class="main-nav">
+                <li><a href="#"><span class="main-nav-title">热门</span></a></li>
+                <li><a href="#"><span class="main-nav-title">初级</span></a></li>
+                <li><a href="#"><span class="main-nav-title">中级</span></a></li>
+                <li><a href="#"><span class="main-nav-title">高级</span></a></li>
+            </ul>
+            <a href="#" class="main-more">查看更多</a>
+        </div>
+        <!--主体2body-->
+        <div class="main2-body">
+            <div class="main2-left">
+                <h2 class="main2-left-title">PHP入门：<br>基础语法到实际应用</h2>
+                <div class="main2-left-desc">
+                    <img src="images/main2-left-list.png" alt="" class="main2-left-list">
+                    <ul>
+                        <li>零基础入门：语法与界</li>
+                        <li>进阶：网络与数据缓存</li>
+                        <li>界面到数据存储</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main2-right">
+                <div class="main2-banner"><img src="images/main2-banner.png" alt="" width="958"></div>
+                <ul class="main2-list">
+                    <li class="main-goods">
+                        <a href="#">
+                            <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                            <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                            <div class="main-goods-desc">
+                                <h4 class="good-level">高级</h4>
+                                <p class="people-num">· 1125人正在学习</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="main-goods">
+                        <a href="#">
+                            <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                            <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                            <div class="main-goods-desc">
+                                <h4 class="good-level">高级</h4>
+                                <p class="people-num">· 1125人正在学习</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="main-goods">
+                        <a href="#">
+                            <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                            <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                            <div class="main-goods-desc">
+                                <h4 class="good-level">高级</h4>
+                                <p class="people-num">· 1125人正在学习</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="main-goods tail">
+                        <a href="#">
+                            <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                            <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                            <div class="main-goods-desc">
+                                <h4 class="good-level">高级</h4>
+                                <p class="people-num">· 1125人正在学习</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--主体3.1-->
+    <div class="main3 w" id="ML">
+        <!--主体3.1header-->
+        <div class="main-header">
+            <h2 class="main-title">机器学习工程师</h2>
+            <!--主体3.1导航栏-->
+            <ul class="main-nav">
+                <li><a href="#"><span class="main-nav-title">热门</span></a></li>
+                <li><a href="#"><span class="main-nav-title">初级</span></a></li>
+                <li><a href="#"><span class="main-nav-title">中级</span></a></li>
+                <li><a href="#"><span class="main-nav-title">高级</span></a></li>
+            </ul>
+            <a href="#" class="main-more">查看更多</a>
+        </div>
+        <!--主体3.1body-->
+        <ul class="main2-list">
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods tail">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--主体3.2-->
+    <div class="main3 w" id="front">
+        <!--主体3.2header-->
+        <div class="main-header">
+            <h2 class="main-title">前端开发工程师</h2>
+            <!--主体3.1导航栏-->
+            <ul class="main-nav">
+                <li><a href="#"><span class="main-nav-title">热门</span></a></li>
+                <li><a href="#"><span class="main-nav-title">初级</span></a></li>
+                <li><a href="#"><span class="main-nav-title">中级</span></a></li>
+                <li><a href="#"><span class="main-nav-title">高级</span></a></li>
+            </ul>
+            <a href="#" class="main-more">查看更多</a>
+        </div>
+        <!--主体3.2body-->
+        <ul class="main2-list">
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+            <li class="main-goods tail">
+                <a href="#">
+                    <img src="images/main1-img1.png" alt="#" class="main-goods-img" width="232">
+                    <h3 class="main-goods-title">Think PHP 5.0 博客系统实战项目演练</h3>
+                    <div class="main-goods-desc">
+                        <h4 class="good-level">高级</h4>
+                        <p class="people-num">· 1125人正在学习</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--底部footer-->
+    <div class="footer-ground">
+        <div class="footer w">
+            <!--左侧-->
+            <div class="footer-left">
+                <!--logo区域-->
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <!--公司描述-->
+                <p class="company-desc">
+                    学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br>
+                    © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号
+                </p>
+                <!--下载APP-->
+                <a href="#" class="downAPP"><span>下载APP</span></a>
+            </div>
+            <!--右侧-->
+            <div class="footer-right">
+                <ul class="footer-1st-ul">
+                    <li class="footer-1st-li">
+                        <dl class="footer-2nd-ul">
+                            <dt>关于学成网</dt>
+                            <dd class="footer-2nd-li"><a href="#">关于</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">管理团队</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">工作机会</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">客户服务</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">帮助</a></dd>
+                        </dl>
+                    </li>
+                    <li class="footer-1st-li">
+                        <dl class="footer-2nd-ul">
+                            <dt>新手指南</dt>
+                            <dd class="footer-2nd-li"><a href="#">如何注册</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">如何选课</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">如何拿到毕业证</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">学分是什么</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">考试未通过怎么办</a></dd>
+                        </dl>
+                    </li>
+                    <li class="footer-1st-li">
+                        <dl class="footer-2nd-ul">
+                            <dt>合作伙伴</dt>
+                            <dd class="footer-2nd-li"><a href="#">合作机构</a></dd>
+                            <dd class="footer-2nd-li"><a href="#">合作导师</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--侧边广告-->
+    <div class="right-ad" id="ad">
+        <div class="advertising">
+            <button class="close" id="close-ad">关闭</button>
+            <img src="images/advertising.jpg" alt="广告" width="100%">
+        </div>
+    </div>
+
+    <!--登录界面-->
+    <div class="gray-bg">
+        <div class="login-table">
+            <button class="close-login"><span class="icon-cancel-circle"></span></button>
+            <h2 class="move">登录</h2>
+            <form action="index.html" class="user-account">
+                <label><input type="text" id="account" placeholder="用户名/邮箱/手机号" name="username"></label>
+                <label>
+                    <input type="password" id="psw" placeholder="请输入密码">
+                    <div>
+                        <span class="icon-eye-hidden" id="eye"></span>
+                        <em>|</em>
+                        <a class="forget">忘记密码</a>
+                    </div>
+                </label>
+                <input type="submit" id="login" value="登录">
+            </form>
+            <a href="signup.html" class="signup">注册账号</a>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    $(function () {
+        // 头部导航栏下拉
+        // 1.
+        // $('.header-nav-li').mouseover(function () {
+        //     $(this).children('ul').css('height', 252);
+        // });
+        // $('.header-nav-li').mouseleave(function () {
+        //     $(this).children('ul').css('height', 0);
+        // });
+
+        // 2.
+        // $('.header-nav-li').mouseover(function () {
+        //     $(this).children('ul').slideDown(300);
+        // });
+        // $('.header-nav-li').mouseout(function () {
+        //     $(this).children('ul').slideUp(50);
+        // });
+
+        // 3.$('  ').hover(function () {}, function () {});  可以只写一个函数，鼠标经过和离开都会触发这个函数
+        $('.header-nav-li').hover(function () {
+            $(this).children('ul').stop().slideDown(300);
+        }, function () {
+            $(this).children('ul').stop().slideUp(50);
+        })
+    })
+</script>
+</html>
